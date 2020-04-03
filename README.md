@@ -291,30 +291,18 @@ $ git reset --hard
 #### Git grep
 
 ```sh
-# 'Searches' for parts of strings in a directory
-$ git grep 'something'
-
-# 'Searches' for parts of strings in a directory and the -n prints out the line numbers where git has found matches
-$ git grep -n 'something'
-
-# 'Searches' for parts of string in a context (some lines before and some after the grepped term)
-$ git grep -C<number of lines> 'something'
-
-# 'Searches' for parts of string and also shows lines BEFORE the grepped term
-$ git grep -B<number of lines> 'something'
-
-# 'Searches' for parts of string and also shows lines AFTER the grepped term
-$ git grep -A<number of lines> 'something'
+$ git grep 'something' # 'Searches' for parts of strings in a directory
+$ git grep -n 'something' # 'Searches' for parts of strings in a directory and the -n prints out the line numbers where git has found matches
+$ git grep -C<number of lines> 'something' # 'Searches' for parts of string in a context (some lines before and some after the grepped term)
+$ git grep -B<number of lines> 'something' # 'Searches' for parts of string and also shows lines BEFORE the grepped term
+$ git grep -A<number of lines> 'something' # 'Searches' for parts of string and also shows lines AFTER the grepped term
 ```
 
 #### Git blame
 
 ```sh
-# Show alteration history of a file with the name of the author
-$ git blame [filename]
-
-# Show alteration history of a file with the name of the author && SHA
-$ git blame [filename] -l
+$ git blame [filename] # Show alteration history of a file with the name of the author
+$ git blame [filename] -l # Show alteration history of a file with the name of the author && SHA
 ```
 
 #### Git log
@@ -322,63 +310,32 @@ $ git blame [filename] -l
 ```sh
 # Show a list of all commits in a repository. This command shows everything about a commit, such as commit ID, author, date and commit message.
 $ git log
-
-# List of commits showing commit messages and changes
-$ git log -p
-
-# List of commits with the particular expression you are looking for
-$ git log -S 'something'
-
-# List of commits by author
-$ git log --author 'Author Name'
-
-# Show a list of commits in a repository in a more summarised way. This shows a shorter version of the commit ID and the commit message.
-$ git log --oneline
-
-# Show a list of commits in a repository since yesterday
-$ git log --since=yesterday
-
-# Shows log by author and searching for specific term inside the commit message
-$ git log --grep "term" --author "name"
+$ git log -p # List of commits showing commit messages and changes
+$ git log -S 'something' # List of commits with the particular expression you are looking for
+$ git log --author 'Author Name' # List of commits by author
+$ git log --oneline # Show a list of commits in a repository in a more summarised way. This shows a shorter version of the commit ID and the commit message.
+$ git log --since=yesterday # Show a list of commits in a repository since yesterday
+$ git log --grep "term" --author "name" # Shows log by author and searching for specific term inside the commit message
 ```
 
 #### Checking what you are committing
 
 ```sh
-# See all (non-staged) changes done to a local repo
-$ git diff
-
-# See all (staged) changes done to a local repo
-$ git diff --cached
-
-# Check what the changes between the files you've committed and the live repo
-$ git diff --stat origin/master
+$ git diff # See all (non-staged) changes done to a local repo
+$ git diff --cached # See all (staged) changes done to a local repo
+$ git diff --stat origin/master # Check what the changes between the files you've committed and the live repo
 ```
 
 #### Useful commands
 
 ```sh
-# Check if a sha is in production
-$ git tag --contains [sha]
-
-# Number of commits by author
-$ git shortlog -s --author 'Author Name'
-
-# List of authors and commits to a repository sorted alphabetically
-$ git shortlog -s -n
-
-# List of commit comments by author
-$ git shortlog -n --author 'Author Name'
-# This also shows the total number of commits by the author
-
-# Number of commits by contributors
-$ git shortlog -s -n
-
-# Undo local changes to a File
-$ git checkout -- filename
-
-# Shows more detailed info about a commit
-$ git cat-file sha -p
+$ git tag --contains [sha] # Check if a sha is in production
+$ git shortlog -s --author 'Author Name' # Number of commits by author
+$ git shortlog -s -n # List of authors and commits to a repository sorted alphabetically
+$ git shortlog -n --author 'Author Name' # List of commit comments by author, also shows total number of author commits
+$ git shortlog -s -n # Number of commits by contributors
+$ git checkout -- filename # Undo local changes to a File
+$ git cat-file sha -p # Shows more detailed info about a commit
 
 # Show number of lines added and removed from a repository by an author since some time in the past.
 $ git log --author="Author name" --pretty=tformat: --numstat --since=month | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
@@ -391,5 +348,3 @@ To add an alias simply open your .gitconfig file on your home directory and incl
 # Shows the log in a more consisted way with the graph for branching and merging
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 ```
-
-
