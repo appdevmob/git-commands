@@ -1,20 +1,5 @@
-﻿<img
-  src="/img/git.png"
-  width="70"
-  align="right"
-/>
-
-
-
-# Useful Git Commands
-
-You can also read the [Portuguese](translation/README.pt-br.md) version.
-
-## About it
-> Have you recently started using Git? This should give you the base commands you need to perform the most common actions in Git. If you find a command that is not here, or could be explained better, please don't hesitate in * [Contributing](#contributing). Cheers!
 
 ## Table of contents
-
 * [Install git](#install-git)
 * [Setting up git](#setting-up-git)
 * [Applying colour to git ](#applying-colour-to-git)
