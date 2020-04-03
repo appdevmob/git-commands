@@ -35,10 +35,6 @@ $ git remote add [NAME] https://github.com/user/fork-repo.git # Add a new 'origi
 * [Useful Alias](#useful-alias)
 * [Contributing](#contributing)
 
-#### Git
-
-Git is a distributed version control system, very easy to learn and supper fast!
-
 #### Install Git
 
 There are a few different ways to install git (from source or for Linux) but the purpose of this page is to focus on git commands, so I am going to assume you are installing git on a Mac.
@@ -51,7 +47,6 @@ Click [here](http://git-scm.com/download/mac) to download and install Git
 
 ```sh
 $ git config --global user.name "User Name"
-
 $ git config --global user.email "email"
 ```
 
@@ -106,17 +101,10 @@ After initializing a git repository in the chosen directory, all files will now 
 To stage changes for commit you need to add the file(s) - or in other words, stage file(s).
 
 ```sh
-# Adding a file
-$ git add filename
-
-# Adding all files
-$ git add -A
-
-# Adding all files changes in a directory
-$ git add .
-
-# Choosing what changes to add (this will got through all your changes and you can 'Y' or 'N' the changes)
-$ git add -p
+$ git add filename # Adding a file
+$ git add -A # Adding all files
+$ git add . # Adding all files changes in a directory
+$ git add -p # Choosing what changes to add (this will got through all your changes and you can 'Y' or 'N' the changes)
 ```
 
 #### Stashing files
@@ -124,35 +112,16 @@ $ git add -p
 Git stash is a very useful command, where git will 'hide' the changes on a dirty directory - but no worries you can re-apply them later. The command will save your local changes away and revert the working directory to match the HEAD commit.
 
 ```sh
-# Stash local changes
-$ git stash
-
-# Stash local changes with a custom message
-$ git stash save "this is your custom message"
-
-# Re-apply the changes you saved in your latest stash
-$ git stash apply
-
-# Re-apply the changes you saved in a given stash number
-$ git stash apply stash@{stash_number}
-
-# Drops any stash by its number
-$ git stash drop stash@{0}
-
-# Apply the stash and then immediately drop it from your stack
-$ git stash pop
-
-# 'Release' a particular stash from your list of stashes
-$ git stash pop stash@{stash_number}
-
-# List all stashes
-$ git stash list
-
-# Show the latest stash changes
-$ git stash show
-
-# See diff details of a given stash number
-$ git diff stash@{0}
+$ git stash # Stash local changes
+$ git stash save "this is your custom message" # Stash local changes with a custom message
+$ git stash apply # Re-apply the changes you saved in your latest stash
+$ git stash apply stash@{stash_number} # Re-apply the changes you saved in a given stash number
+$ git stash drop stash@{0} # Drops any stash by its number
+$ git stash pop # Apply the stash and then immediately drop it from your stack
+$ git stash pop stash@{stash_number} # 'Release' a particular stash from your list of stashes
+$ git stash list # List all stashes
+$ git stash show # Show the latest stash changes
+$ git diff stash@{0} # See diff details of a given stash number
 ```
 
 #### Committing files
