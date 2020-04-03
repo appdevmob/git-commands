@@ -1,8 +1,5 @@
 #### Git remote
 ```sh
-
-To add desktop folder to repo -> www.github.com -> Create Repo -> 
-
 $ git init # initialise folder
 $ git add . # add folder to git 
 $ git status # check git status
@@ -10,7 +7,6 @@ $ git commit -m "comment" # git commit with comment
 $ git init # initialise local folder
 $ git remote add origin http//link from github # Create Repo, http//link and add to git for gitHub Push
 $ git push -u origin master # Push local folder to remote github 
-
 
 $ git remote show origin # Show where 'origin' is pointing to and also tracked branches
 $ git remote -v # Show where 'origin' is pointing to
