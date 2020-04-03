@@ -5,7 +5,7 @@ $ git add . # add folder to git
 $ git status # check git status
 $ git commit -m "comment" # git commit with comment
 $ git init # initialise local folder
-$ git remote add origin http//link from github # Create Repo, http//link and add to git for gitHub Push
+$ git remote add origin http//link # Create Repo, http//link and add to git for gitHub Push
 $ git push -u origin master # Push local folder to remote github 
 
 $ git remote show origin # Show where 'origin' is pointing to and also tracked branches
