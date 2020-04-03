@@ -1,3 +1,11 @@
+#### Git remote
+```sh
+$ git remote show origin # Show where 'origin' is pointing to and also tracked branches
+$ git remote -v # Show where 'origin' is pointing to
+$ git remote set-url origin https://github.com/user/repo.git # Change the 'origin' remote's URL
+$ git remote add [NAME] https://github.com/user/fork-repo.git # Add a new 'origin'
+```
+
 
 ## Table of contents
 * [Install git](#install-git)
@@ -278,22 +286,7 @@ $ git reset --hard sha
 $ git reset --hard
 ```
 
-#### Git remote
 
-```sh
-# Show where 'origin' is pointing to and also tracked branches
-$ git remote show origin
-
-# Show where 'origin' is pointing to
-$ git remote -v
-
-# Change the 'origin' remote's URL
-$ git remote set-url origin https://github.com/user/repo.git
-
-# Add a new 'origin'
-# Usually use to 'rebase' from forks
-$ git remote add [NAME] https://github.com/user/fork-repo.git
-```
 
 #### Git grep
 
@@ -399,10 +392,4 @@ To add an alias simply open your .gitconfig file on your home directory and incl
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 ```
 
-### Contributing
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push -u origin my-new-feature`
-5. Submit a pull request - cheers!
